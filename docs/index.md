@@ -40,6 +40,6 @@ $ cd <full-name-dir>                                                    ; # 5. C
     $ git push origin st_1                                                  ; # 10. Publish changes to your branch into remote repo
     ```
 
-You can also visit <a href="../git_flow"  target="_blank" rel="noopener">Git Flow section</a>.
+You can also visit <a href="git_flow"  target="_blank" rel="noopener">Git Flow section</a>.
 
 
