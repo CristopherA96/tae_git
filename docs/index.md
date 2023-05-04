@@ -28,9 +28,9 @@ $ cd <full-name-dir>                                                    ; # 5. C
 
     $ git clone https://github.com/CristopherA96/tae_2023_rtl2gds           ; # 1. Clone repository
     $ cd tae_2023_rtl2gds                                                   ; # 2. Change to repo directory
-    $ git checkout -b st_<id>                                               ; # 3. Create a branch following st_id structure and switch to it
-    $ mkdir <full-name-dir>                                                 ; # 4. Create a folder named like your full name.
-    $ cd <full-name-dir>                                                    ; # 5. Change to your directory
+    $ git checkout -b st_1                                                  ; # 3. Create a branch following st_id structure and switch to it
+    $ mkdir juan_perez                                                      ; # 4. Create a folder named like your full name.
+    $ cd juan_perez                                                         ; # 5. Change to your directory
     $ cp ~/tae_reports/lab1.pdf .                                           ; # 6. Copy external files to your repo. In this case just one file added.
     $ git add lab1.pdf                                                      ; # 7. Add files to the git repo.
     $ git status                                                            ; # Optional: Check status to see changes to be commited
