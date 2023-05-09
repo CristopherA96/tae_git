@@ -68,9 +68,10 @@ The steps to add SSH key are:
 8. In terminal: `cat ~/.ssh/<keyname>.pub`, and copy-paste output in **Key** section.
 9. Add SSH key.
 
+<br>
 <center>
     <figure markdown>
-        ![ssh](){ width="500" }
+        ![ssh](https://github.com/CristopherA96/tae_git/blob/main/assets/img/ssh-add.png?raw=true){ width="800" }
         <figcaption>**Figure 1:** Window to add your <u>public SSH key</u> information..</figcaption>
     </figure>
 </center>
