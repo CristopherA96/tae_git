@@ -44,7 +44,11 @@ The most common way to authenticate to GitHub is using <u>SSH keys</u>, because 
         
         ; # 2. ADD SSH KEY TO ssh-agent
         
-        $ eval '$(ssh-agent -s)'                                                    ; # Start SSH agent in background
+        ; # If you have any problem with ssh-agent, before ssh-agent start, run ssh-agent process
+        
+        $ exec ssh-agent bash
+        
+        $ eval "$(ssh-agent -s)"                                                    ; # Start SSH agent in background
             ; # It will show you information like the following
                 Agent pid <id>
         
