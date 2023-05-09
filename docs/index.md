@@ -9,7 +9,9 @@ In this webpage relevant information about control version `Git` will be shown t
 ---
 ```yaml
 
-$ git clone https://github.com/CristopherA96/tae_2023_rtl2gds           ; # 1. Clone repository
+$ git clone https://github.com/CristopherA96/tae_2023_rtl2gds           ; # 1. Clone repository using Personal Token
+$ git clone git@github.com:CristopherA96/tae_2023_rtl2gds.git           ; # 1. Clone repository using SSH, if you add SSH key
+
 $ cd tae_2023_rtl2gds                                                   ; # 2. Change to repo directory
 $ git checkout -b st_<id>                                               ; # 3. Create a branch following st_id structure and switch to it
 $ mkdir <full-name-dir>                                                 ; # 4. Create a folder named like your full name
@@ -27,7 +29,7 @@ $ cd <full-name-dir>                                                    ; # 5. C
     ```yaml
 
     $ git clone https://github.com/CristopherA96/tae_2023_rtl2gds           ; # 1. Clone repository using HTTPS, if you set Personal Token
-    $ git clone git@github.com:CristopherA96/tae_2023_rtl2gds.git           ; # 1. Clone repostory using SSH, if you add SSH key
+    $ git clone git@github.com:CristopherA96/tae_2023_rtl2gds.git           ; # 1. Clone repository using SSH, if you add SSH key
     
     $ cd tae_2023_rtl2gds                                                   ; # 2. Change to repo directory
     $ git checkout -b st_1                                                  ; # 3. Create a branch following st_id structure and switch to it
