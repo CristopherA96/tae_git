@@ -71,10 +71,12 @@ The steps to add SSH key are:
 <br>
 <center>
     <figure markdown>
-        ![ssh](https://github.com/CristopherA96/tae_git/blob/main/assets/img/ssh-add.png?raw=true){ width="800" }
+        ![ssh](https://raw.githubusercontent.com/CristopherA96/tae_git/main/assets/img/ssh-add.png){ width="800" }
         <figcaption>**Figure 1:** Window to add your <u>public SSH key</u> information..</figcaption>
     </figure>
 </center>
+
+
 
 
 
