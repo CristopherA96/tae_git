@@ -64,7 +64,7 @@
 ---
 
 ```yaml
-    $ git commit -m --amend "NEW_MESSAGE"   ; # Commit changes with new specific message. Only for the last one
+    $ git commit --amend -m "NEW_MESSAGE"   ; # Commit changes with new specific message. Only for the last one
 ```
 
 ### Remove files
