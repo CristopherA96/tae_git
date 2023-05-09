@@ -26,7 +26,9 @@ $ cd <full-name-dir>                                                    ; # 5. C
 !!! example
     ```yaml
 
-    $ git clone https://github.com/CristopherA96/tae_2023_rtl2gds           ; # 1. Clone repository
+    $ git clone https://github.com/CristopherA96/tae_2023_rtl2gds           ; # 1. Clone repository using HTTPS, if you set Personal Token
+    $ git clone git@github.com:CristopherA96/tae_2023_rtl2gds.git           ; # 1. Clone repostory using SSH, if you add SSH key
+    
     $ cd tae_2023_rtl2gds                                                   ; # 2. Change to repo directory
     $ git checkout -b st_1                                                  ; # 3. Create a branch following st_id structure and switch to it
     $ mkdir juan_perez                                                      ; # 4. Create a folder named like your full name.
@@ -42,4 +44,6 @@ $ cd <full-name-dir>                                                    ; # 5. C
 
 You can also visit <a href="./git_flow"  target="_blank" rel="noopener">Git Flow section</a>.
 
+!!! Warning
+    If you set your key, use SSH url instead HTTPS.
 
