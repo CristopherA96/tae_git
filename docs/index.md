@@ -16,7 +16,17 @@ $ cd tae_2023_rtl2gds                                                   ; # 2. C
 $ git checkout -b st_<id>                                               ; # 3. Create a branch following st_id structure and switch to it
 $ mkdir <full-name-dir>                                                 ; # 4. Create a folder named like your full name
 $ cd <full-name-dir>                                                    ; # 5. Change your directory
+$ gedit <file.extension>                                                ; # 6. Create a file for test and save changes
+$ git add <file.extension>                                              ; # 7. Add your directory with lab1.pdf inside
+$ git status
+$ git commit -m "[ST_YOUR_ID] <file> added"                             ; # 8. Commit your added file
+$ git status
+$ git log
+$ git push origin <st_your_id>                                          ; # 9. Publish your changes withing your branch to remote repo
 ```
+
+!!! info
+    You can add a file that you want not neccesary lab1.pdf. This file was for example, but you can add a test.txt file only to add something to the directory that you can publish.
 
 !!! failure
     You will be working on your branch, <u>please do not modify files from other branches if it is not yours</u>.
