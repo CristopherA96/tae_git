@@ -1,0 +1,1000 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../github/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+    
+    
+      
+        <title>Tcl - TAE 2023 - Git</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tcl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TAE 2023 - Git" class="md-header__button md-logo" aria-label="TAE 2023 - Git" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 12h7v1.5h-7m0-4h7V11h-7m0 3.5h7V16h-7m8-12H3a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 15h-9V6h9"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TAE 2023 - Git
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tcl
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      TAE 2023
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../configure_github/" class="md-tabs__link">
+      Configure Github
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../git_commands/" class="md-tabs__link">
+      Git Commands
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../git_flow/" class="md-tabs__link">
+      Git Flow
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../github/" class="md-tabs__link">
+      GitHub
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Tcl
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TAE 2023 - Git" class="md-nav__button md-logo" aria-label="TAE 2023 - Git" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 12h7v1.5h-7m0-4h7V11h-7m0 3.5h7V16h-7m8-12H3a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 15h-9V6h9"/></svg>
+
+    </a>
+    TAE 2023 - Git
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        TAE 2023
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure_github/" class="md-nav__link">
+        Configure Github
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_commands/" class="md-nav__link">
+        Git Commands
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_flow/" class="md-nav__link">
+        Git Flow
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tcl
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tcl
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-structures" class="md-nav__link">
+    Control structures
+  </a>
+  
+    <nav class="md-nav" aria-label="Control structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional" class="md-nav__link">
+    Conditional
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    Loops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-substitution" class="md-nav__link">
+    Command substitution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-substitution" class="md-nav__link">
+    Variable substitution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structures" class="md-nav__link">
+    Data structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-io" class="md-nav__link">
+    File I/O
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expression" class="md-nav__link">
+    Regular expression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-variables" class="md-nav__link">
+    Special variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratory" class="md-nav__link">
+    Laboratory
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tcl">Tcl</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<hr />
+<p>TCL means Tool Command Language, it is one of the most popular scripting languages in the industry just like Perl.</p>
+<p>It supports the next characteristics:</p>
+<ul>
+<li>Variables, Control structures, Command substitution</li>
+<li>Quotes and braces, String manipulation</li>
+<li>I/O and Network sockets</li>
+<li>File management, Time and date manipulation</li>
+<li>Functions and Subprocesses</li>
+<li>List, Arrays and Events</li>
+<li>Comments (Inline and not inline)</li>
+<li>Built-in functions</li>
+</ul>
+<p>In the following chapters we will be learning a little about each of the basic features mentioned.</p>
+<h2 id="variables">Variables</h2>
+<hr />
+<p>Tcl as many other languages allows us to store values in variables. This values can be access by using a command, such as <code>set</code>.</p>
+<p>This command is typically used to <strong>write and read</strong> variables.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Writing in var1 the value 10</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">set</span><span class="w"> </span>var1<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Reading the value of var1</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">set</span><span class="w"> </span>var1
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># To use value of variable in a command</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>expr<span class="w"> </span><span class="nv">$var1</span>+20
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In Tcl we do not have <strong>data types</strong>, also we <strong>do not need to declare variables</strong>, they will be created automatically once it is set.</p>
+</div>
+<h2 id="control-structures">Control structures</h2>
+<hr />
+<p>Some of the most common control structures include conditional, looping and procedures. This control structures are commands that will take Tcl scripts as arguments.</p>
+<h3 id="conditional">Conditional</h3>
+<hr />
+<p>The structure for decisions operations using conditional structures is shown below.</p>
+<p><strong>if-else</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">{</span>bool_expression<span class="o">}</span><span class="w"> </span><span class="o">{</span><span class="w">                              </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="c1"># tasks to do when bool_expression is True</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="c1"># tasks to do when boll_expression is False</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong>if-else if-else</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">{</span>bool_expr_1<span class="o">}</span><span class="w"> </span><span class="o">{</span><span class="w">                              </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="c1"># tasks to do when bool_expr_1 is True</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span>elseif<span class="w"> </span><span class="o">{</span>bool_expr_2<span class="o">}</span><span class="w">  </span><span class="o">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="c1"># tasks to do when bool_expr_2 is True</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="c1"># tasks to do when none of above conditions is True</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong>switch</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>switch<span class="w"> </span>trigger_var<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span>opt_1<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">            </span><span class="c1"># Tasks to do when opt_1 is trigger</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span>opt_2<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="c1"># Tasks to do when opt_1 is trigger</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span>...
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span>...
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong>'?' operator</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>trigger_var<span class="w"> </span>?<span class="w"> </span>expr_1_True<span class="w"> </span>:<span class="w"> </span>expr_2_False
+</code></pre></div></p>
+<p>Some examples for conditional structures shown above are:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># if-else if-else</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var1<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$var1</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;The value of var1 is greater than 10&quot;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span>elseif<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$var1</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;The value is not equal to 10&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;The value is </span><span class="nv">$var1</span><span class="s2">&quot;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># if-else</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>age<span class="w"> </span><span class="m">20</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$age</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;You are older than 20 years old&quot;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;You are younger than 20 years old&quot;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="c1"># &#39;?&#39; operator</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var_1<span class="w"> </span><span class="o">[</span>expr<span class="w"> </span><span class="nv">$var</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>?<span class="w"> </span><span class="m">3</span><span class="w"> </span>:<span class="w"> </span><span class="m">4</span><span class="o">]</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span>puts<span class="w"> </span><span class="s2">&quot;Value of var_1 is %var_1&quot;</span>
+</code></pre></div>
+</div>
+<h3 id="loops">Loops</h3>
+<hr />
+<p>In order to do repetitive tasks, we typically use loops, some of them are:</p>
+<ul>
+<li><strong>while</strong>: it repeats statements while a given condition is true. It means, that while loop tests the condition before executing repetitive tasks.</li>
+<li><strong>for</strong>: it executes multiple statements every time.</li>
+<li><strong>foreach</strong>: it works equal to for loop but using simplified syntaxis.</li>
+</ul>
+<p><strong>while</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="o">{</span>condition<span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">        </span><span class="c1"># tasks to repeat</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong>for</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">{</span>initialization<span class="o">}</span><span class="w"> </span><span class="o">{</span>condition<span class="o">}</span><span class="w"> </span><span class="o">{</span>increment<span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">        </span><span class="c1"># tasks to repeat</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong>foreach</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>foreach<span class="w"> </span><span class="o">{</span>element<span class="o">}</span><span class="w"> </span><span class="o">{</span>list_body<span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span><span class="c1"># tasks to repeat</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div></p>
+<p>Some examples for loop structures shown above are:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># while</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var1<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$var1</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;Value of var1: </span><span class="nv">$var1</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span>incr<span class="w"> </span>var1
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># for</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span>i<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span><span class="nv">$i</span><span class="w"> </span>&lt;<span class="w"> </span><span class="m">10</span><span class="o">}</span><span class="w"> </span><span class="o">{</span>incr<span class="w"> </span>i<span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;Index </span><span class="nv">$i</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1"># foreach</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>list<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span>foreach<span class="w"> </span>item<span class="w"> </span><span class="nv">$list</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;Item in list is </span><span class="nv">$item</span><span class="s2">&quot;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Also, we have loop control methods such as <code>break</code> and <code>continue</code>.</p>
+</div>
+<h2 id="command-substitution">Command substitution</h2>
+<hr />
+<p>This term is used to modify the value of a built-in function of the value of a variable. To do that, we usually use the <code>expr</code> command and then the new value, all of this into square brackets</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var1<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var2<span class="w"> </span><span class="o">[</span>expr<span class="w"> </span><span class="nv">$var1</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span><span class="o">]</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>expr</code> is a command used to evaluate a given expression and display its standard output (stdout).</p>
+</div>
+<h2 id="variable-substitution">Variable substitution</h2>
+<hr />
+<p>Another great feature of Tcl is something called "variable substitution", it refers to accessing the value stored in a variable with a dollar sign <code>$</code> before the variable name</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>var1<span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>puts<span class="w"> </span><span class="s2">&quot;a is </span><span class="nv">$a</span><span class="s2">&quot;</span>
+</code></pre></div>
+<h2 id="data-structures">Data structures</h2>
+<p><strong>Array</strong>
+An array is a group or a container of variables which contains each element on a specific index.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>array_name<span class="o">(</span>index<span class="o">)</span><span class="w"> </span>value
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="c1"># empty array</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span>array<span class="w"> </span><span class="nb">set</span><span class="w"> </span>array_name<span class="w"> </span><span class="o">{}</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Some built-in functions to manipulate arrays are:
+- Size of array <code>[array size array_name]</code>
+- Exists element in array <code>[array exists array_item]</code>
+- Return names of index in array <code>[array names array_name]</code></p>
+</div>
+<p><strong>List</strong>
+A list as we know is a collection of items.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>my_list<span class="w"> </span><span class="o">{</span><span class="w"> </span>item1<span class="w"> </span>item2<span class="w"> </span>item3<span class="w"> </span>...<span class="w"> </span><span class="o">}</span><span class="w">       </span><span class="p">;</span><span class="c1"># Option 1 to declare a list</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>my_list<span class="w"> </span><span class="o">[</span>list<span class="w"> </span>item1<span class="w"> </span>item2<span class="w"> </span>item3<span class="w"> </span>...<span class="w"> </span><span class="o">]</span><span class="w">   </span><span class="p">;</span><span class="c1"># Option 2 to declare a list using built-in function `list`</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>my_list<span class="w"> </span><span class="o">[</span>split<span class="w"> </span><span class="s2">&quot;items separated by a character &quot;</span><span class="w"> </span>split_character<span class="o">]</span><span class="w">   </span><span class="p">;</span><span class="c1"># Option3 to declare a list using a split character to separate items</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Some built-in functions are:
+- Append item in list <code>append list_name split_character value</code> or <code>append list_name value</code>
+- Length of list <code>[llength list_name]</code>
+- List item at index <code>[lindex list_name index]</code>
+- Insert items at index <code>[linsert list_name index value_1 value_2 ... ]</code>
+- Replace items  at index <code>[lreplace list_name first_index last_index value_1 value_2 ... ]</code>
+- Set item at index <code>[lset list_name index value]</code>
+- Transform list to variables <code>lassign list_name var1 var2 ...</code>
+- Sort a list <code>[lsort list_name]</code></p>
+</div>
+<p><strong>Dictionary</strong>
+A dictionary is an associative array, it maps values to keys.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span>dict<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dictionary_name<span class="w"> </span>key<span class="w"> </span>value<span class="w">      </span><span class="p">;</span><span class="c1"># Option 1 to declare a dictionary</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span>dict<span class="w"> </span>create<span class="w"> </span>dictionary_name<span class="w"> </span>key1<span class="w"> </span>value1<span class="w"> </span>key2<span class="w"> </span>value2<span class="w"> </span>...
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Some built-in functions are:
+- Size of dictionary <code>[dict size dictionary_name]</code>
+- Get value for key <code>[dict get $dictionary_name $key]</code>
+- Get all keys <code>[dict keys $dictionary_name]</code>
+- Get all values <code>[dict values $dictionary_name]</code>
+- Know if key exists <code>[dict exists $dictionary_name $key]</code></p>
+</div>
+<p><strong>Procedures</strong>
+Procedures are like functions in other languages.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">    </span>proc<span class="w"> </span>procedure_name<span class="w"> </span><span class="o">{</span>arguments<span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">        </span><span class="c1"># Tasks to implement</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="o">}</span>
+</code></pre></div>
+<p>Some examples for those data structures are shown below:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span><span class="c1"># Array</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span>array<span class="w"> </span><span class="nb">set</span><span class="w"> </span>my_array<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">}</span><span class="w">           </span><span class="p">;</span><span class="c1"># Initialize array with some values</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span>i<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&lt;<span class="w"> </span><span class="o">[</span>array<span class="w"> </span>size<span class="w"> </span>my_array<span class="o">]</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>incr<span class="w"> </span>i<span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span>puts<span class="w"> </span><span class="s2">&quot;Value_</span><span class="nv">$i</span><span class="s2"> is </span><span class="nv">$my_array</span><span class="s2">(</span><span class="nv">$i</span><span class="s2">)&quot;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="c1"># List</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>my_list_1<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$my_list_1</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>my_list_2<span class="w"> </span><span class="o">[</span>list<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="o">]</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$my_list_2</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>my_list_3<span class="w"> </span><span class="o">[</span>split<span class="w"> </span><span class="s2">&quot;mon_tue_wed_thu_fri_sat_sun&quot;</span><span class="w"> </span>_<span class="o">]</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$my_list_3</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="c1"># Dictionary</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>days<span class="w"> </span><span class="o">[</span>dict<span class="w"> </span>create<span class="w"> </span>day1<span class="w"> </span><span class="s2">&quot;monday&quot;</span><span class="w"> </span>day2<span class="w"> </span><span class="s2">&quot;tuesday&quot;</span><span class="o">]</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$days</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">    </span>foreach<span class="w"> </span>item<span class="w"> </span><span class="o">[</span>dict<span class="w"> </span>keys<span class="w"> </span><span class="nv">$days</span><span class="o">]</span><span class="w"> </span><span class="o">{</span><span class="w">                    </span><span class="p">;</span><span class="c1"># Iterating into entire days dictionary (keys with values)</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>value<span class="w"> </span><span class="o">[</span>dict<span class="w"> </span>get<span class="w"> </span><span class="nv">$days</span><span class="w"> </span><span class="nv">$item</span><span class="o">]</span><span class="w">                </span><span class="p">;</span><span class="c1"># Setting value var with the return of getting value for each key</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span>puts<span class="w"> </span><span class="nv">$value</span><span class="w">                                     </span><span class="p">;</span><span class="c1"># Printing value content</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">    </span><span class="c1"># Procedures</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">    </span>proc<span class="w"> </span>mult<span class="w"> </span><span class="o">{</span>var1<span class="w"> </span>var2<span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">        </span><span class="nb">set</span><span class="w"> </span>mult_res<span class="w"> </span><span class="o">[</span>expr<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$var1</span><span class="w"> </span>*<span class="w"> </span><span class="nv">$var2</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;The product of </span><span class="nv">$var1</span><span class="s2"> * </span><span class="nv">$var2</span><span class="s2"> is </span><span class="nv">$mult_res</span><span class="s2">&quot;</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">    </span>puts<span class="w"> </span><span class="o">[</span>add<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="o">]</span>
+</code></pre></div>
+</div>
+<h2 id="file-io">File I/O</h2>
+<p>In Tcl we can handle with files by using some built-in functions, such as <code>open, read, puts, gets, close</code>.</p>
+<p><strong>Open a file</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span>open<span class="w"> </span>file_name<span class="w"> </span>access_mode<span class="w">          </span><span class="p">;</span><span class="c1"># Access modes are r -&gt; read, w -&gt; write, a -&gt; append, r+ -&gt; read and write (file shall exist), w+ -&gt; read and write (file is overwritten if exists otherwise it will create it.), a+ -&gt; read and write (read will start at beginning, but writing can only be appended). </span>
+</code></pre></div></p>
+<p><strong>Close a file</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">    </span>close<span class="w"> </span>file_name<span class="w"> </span>
+</code></pre></div></p>
+<p><strong>Write a file</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$filename</span><span class="w"> </span><span class="s2">&quot;text to write&quot;</span>
+</code></pre></div></p>
+<p><strong>Read a file</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>file_data_to_read<span class="w"> </span><span class="o">[</span><span class="nb">read</span><span class="w"> </span><span class="nv">$filename</span><span class="o">]</span>
+</code></pre></div></p>
+<p>Some examples for those instructions are shown below.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">    </span><span class="c1"># Writing into text.txt file</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>filename_pointer<span class="w"> </span><span class="o">[</span>open<span class="w"> </span><span class="s2">&quot;text.txt&quot;</span><span class="w"> </span>w+<span class="o">]</span><span class="w">           </span><span class="p">;</span><span class="c1"># Opening file to write into it</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$filename_pointer</span><span class="w"> </span><span class="s2">&quot;test 1&quot;</span><span class="w">                     </span><span class="p">;</span><span class="c1"># Writing test 1 in the file text.txt</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span>close<span class="w"> </span><span class="nv">$filename_pointer</span><span class="w">                             </span><span class="p">;</span><span class="c1"># Closing filename_pointer file</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="c1"># Reading a file</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>filename_pointer<span class="w"> </span><span class="o">[</span>open<span class="w"> </span><span class="s2">&quot;text.txt&quot;</span><span class="w"> </span>r<span class="o">]</span><span class="w">            </span><span class="p">;</span><span class="c1"># Opening file to read the text file</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>file_data_to_read<span class="w"> </span><span class="o">[</span><span class="nb">read</span><span class="w"> </span><span class="nv">$filename_pointer</span><span class="o">]</span><span class="w">      </span><span class="p">;</span><span class="c1"># Reading filename</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$file_data_to_read</span><span class="w">                             </span><span class="p">;</span><span class="c1"># Printing data that was read</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">    </span>close<span class="w"> </span><span class="nv">$filename_pointer</span><span class="w">                             </span><span class="p">;</span><span class="c1"># Closing filename_pointer file</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">    </span><span class="c1"># Another option to work with text.txt file</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>filename_pointer<span class="w"> </span><span class="o">[</span>open<span class="w"> </span><span class="s2">&quot;text.txt&quot;</span><span class="w"> </span>w+<span class="o">]</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">    </span>puts<span class="w"> </span><span class="nv">$filename_pointer</span><span class="w"> </span><span class="s2">&quot;test\ntest&quot;</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">    </span>close<span class="w"> </span><span class="nv">$filename_pointer</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">    </span><span class="nb">set</span><span class="w"> </span>filename_pointer<span class="w"> </span><span class="o">[</span>open<span class="w"> </span><span class="s2">&quot;text.txt&quot;</span><span class="w"> </span>r<span class="o">]</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">[</span>gets<span class="w"> </span><span class="nv">$filename_pointer</span><span class="w"> </span>data<span class="o">]</span><span class="w"> </span>&gt;<span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="w">        </span>puts<span class="w"> </span><span class="nv">$data</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="w">    </span>close<span class="w"> </span><span class="nv">$filename_pointer</span>
+</code></pre></div>
+<h2 id="regular-expression">Regular expression</h2>
+<hr />
+<p>To work with regular expression we use <code>regexp</code> in Tcl, we know that regular expression is a sequence of characters that contains a search pattern.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w">    </span>regexp<span class="w"> </span>optional_switches<span class="w"> </span>patterns<span class="w"> </span>search_string<span class="w"> </span>full_match<span class="w"> </span>sub_match_1<span class="w"> </span>...
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Regular expression</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>Exact match</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>Any lowercase letter from a-z</td>
+</tr>
+<tr>
+<td>.</td>
+<td>Any character</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Beginning string should match</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Ending string should match</td>
+</tr>
+<tr>
+<td>\^</td>
+<td>Backslash sequence to match special character ^.</td>
+</tr>
+<tr>
+<td>()</td>
+<td>Add the above sequences inside parenthesis to make a regular expression</td>
+</tr>
+<tr>
+<td>x*</td>
+<td>Should match 0 or more ocurrences of the preceding x</td>
+</tr>
+<tr>
+<td>x+</td>
+<td>Should match 1 or more ocurrences of the preceding x</td>
+</tr>
+<tr>
+<td>[a-z]?</td>
+<td>Should match 0 or 1 occurrence of the preceding x</td>
+</tr>
+<tr>
+<td>{digit}</td>
+<td>Matches exactly digit ocurrences of previous regex expression. Digit that contains 0-9</td>
+</tr>
+<tr>
+<td>{digit,}</td>
+<td>Matches 3 or more digit ocurrences of previous regex expression. Digit that contains 0-9</td>
+</tr>
+<tr>
+<td>{digit1, digit2}</td>
+<td>Ocurrences matches the range between digit1 and digit2 ocurrences of previous regex expressions.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="special-variables">Special variables</h2>
+<hr />
+<p>Additional to all basic features that Tcl has, there are something called special variables. Those variables shall have special functionality.</p>
+<table>
+<thead>
+<tr>
+<th>Regular expression</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argc</td>
+<td>Refers to a number of command-line arguments</td>
+</tr>
+<tr>
+<td>argv</td>
+<td>Refers to the list containing the command-line arguments</td>
+</tr>
+<tr>
+<td>argv0</td>
+<td>Refers to the file name of the file being interpreted or the name by which we invoke the script</td>
+</tr>
+<tr>
+<td>env</td>
+<td>Used to represent the array of elements that are environment variables</td>
+</tr>
+<tr>
+<td>errorCode</td>
+<td>Used to provide the error code for the last error</td>
+</tr>
+</tbody>
+</table>
+<p>There are more special variables but some of the most useful are shown above.</p>
+<h2 id="laboratory">Laboratory</h2>
+<hr />
+<p>Develop a program that will implement:</p>
+<ul>
+<li>Procedures for basic arithmetical operations, such as add, sub, mul, div with two numbers.</li>
+<li>Each procedure can be access by selecting an option in a menu.</li>
+<li>The values for each number and the results of each operation shall be store in a file. i.e. add 2 4 6</li>
+<li>In the menu, shall have an option to read the numbers into the file which can be used to do the other operations with those values, it is something like to import content of a file to handle with.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, try to use as much as you can the features provided in this guide. Be creative.</p>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/CristopherA96" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      
+    
+  </body>
+</html>
